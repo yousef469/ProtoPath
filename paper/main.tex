@@ -73,10 +73,10 @@ The Prototype Distribution Module (PDM) projects the 768-dimensional global feat
 
 where $\mathbf{W}_k \in \mathbb{R}^{d \times 768}$ are learned linear projections. The concatenated vector $\mathbf{z} \in \mathbb{R}^{Kd}$ is L2-normalized.
 
-For each cancer class $c$, a learnable prototype $\mathbf{p}_c \in \mathbb{R}^{Kd}$ is maintained. Classification logits are computed as cosine similarity:
+For each cancer class $c$, a learnable prototype $\mathbf{p}_c \in \mathbb{R}^{Kd}$ is maintained. Classification logits are computed as cosine similarity between the normalized embedding and each prototype:
 
 \begin{equation}
-    \text{logit}_c = \frac{\mathbf{z} \cdot \mathbf{p}_c / \tau}{\max(\epsilon, 1)}
+    \text{logit}_c = \frac{\mathbf{z} \cdot \mathbf{p}_c}{\tau}
 \end{equation}
 
 where $\tau$ is a learnable temperature parameter, clamped to $[0.01, 1.0]$.
