@@ -1,0 +1,8 @@
+checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+training.log
+evaluation_results.csv
+*.pt
+*.pth
