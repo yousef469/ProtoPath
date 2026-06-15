@@ -1,17 +1,6 @@
-checkpoints/
 __pycache__/
 *.pyc
 .DS_Store
 training.log
 evaluation_results.csv
 *.pt
-*.pth
-config.py
-dataset.py
-evaluate.py
-loss.py
-model.py
-requirements.txt
-run.py
-train.py
-v2lightning_model.py
